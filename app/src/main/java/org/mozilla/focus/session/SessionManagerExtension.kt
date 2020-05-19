@@ -10,16 +10,19 @@ import org.mozilla.focus.ext.savedGeckoSession
 import org.mozilla.focus.utils.AppConstants
 
 fun SessionManager.removeAndCloseSession(session: Session) {
+    /*
     if (AppConstants.isGeckoBuild) {
         val geckoSession = session.savedGeckoSession
         if (geckoSession != null && geckoSession.isOpen) {
             geckoSession.close()
         }
     }
+    */
     remove(session)
 }
 
 fun SessionManager.removeAndCloseAllSessions() {
+    /*
     if (AppConstants.isGeckoBuild) {
         sessions.forEach { session ->
             val geckoSession = session.savedGeckoSession
@@ -27,11 +30,12 @@ fun SessionManager.removeAndCloseAllSessions() {
                 geckoSession.close()
             }
         }
-    }
+    }*/
     removeSessions()
 }
 
 fun SessionManager.removeAllAndCloseAllSessions() {
+    /*
     if (AppConstants.isGeckoBuild) {
         all.forEach { session ->
             val geckoSession = session.savedGeckoSession
@@ -40,5 +44,6 @@ fun SessionManager.removeAllAndCloseAllSessions() {
             }
         }
     }
+     */
     removeAll()
 }
